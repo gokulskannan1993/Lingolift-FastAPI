@@ -7,5 +7,5 @@ router = APIRouter()
 
 @router.post("/")
 async def summarize_route(input: SummaryInput):
-    output = await summarize(input.text, input.tone)
+    output = await summarize(input.text, input.length)
     return {"original": input.text, "summary": output}

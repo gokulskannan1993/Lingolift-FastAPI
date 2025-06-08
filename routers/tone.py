@@ -7,5 +7,5 @@ router = APIRouter()
 
 @router.post("/")
 async def change_tone_route(input: ToneInput):
-    output = await change_tone(input.text, input.tone)
+    output = await change_tone(input.text, input.target_tone)
     return {"original": input.text, "changedTone": output}
