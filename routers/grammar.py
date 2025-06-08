@@ -7,5 +7,5 @@ router = APIRouter()
 
 @router.post("/")
 async def correct_grammar_route(input: TextInput):
-    output = await correct_grammar(input.text, input.tone)
+    output = await correct_grammar(input.text)
     return {"original": input.text, "corrected": output}
